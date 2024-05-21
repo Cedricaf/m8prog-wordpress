@@ -1,0 +1,68 @@
+# General
+*.log
+*.tmp
+*.swp
+*.swo
+*.bak
+*.orig
+*.lock
+*.DS_Store
+*.directory
+Thumbs.db
+*.~undo-tree~
+
+
+
+# Dependency directories
+node_modules/
+vendor/
+lib/
+target/
+
+# IDE and editor specific
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyd
+*.pyo
+*.pyd
+
+
+
+# Ruby
+*.gem
+*.rbc
+*.sass-cache
+.ruby-version
+.rvmrc
+
+# Node
+node_modules/
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+
+# Logs
+logs
+*.log
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Build directories
+dist/
+out/
+build/
+coverage/
+tmp/
