@@ -1,0 +1,15 @@
+/*
+ Theme Name:   Cedric theme child
+ Description:  A custom child theme for My Parent Theme
+ Author:       Cedric Kiraly
+ Author URI:   https://34737.hosts1.ma-cloud.nl
+ Template:     cedrictheme
+ Version:      1.0.0
+ License:      GNU General Public License v2 or later
+ License URI:  http://www.gnu.org/licenses/gpl-2.0.html
+ Text Domain:  cedrictheme-child
+*/
+
+body {
+    background-color: #8f8080;
+}
