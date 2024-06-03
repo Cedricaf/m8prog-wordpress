@@ -15,7 +15,7 @@
 the_post_navigation(
     [
         'next_text' => __( 'Next post', 'cedrictheme-child' ),
-        'prev_text' => __( 'Previous post:', 'm8progCedricTheme' ),
+        'prev_text' => __( 'Previous post:', 'cedrictheme-child' ),
     ] 
 );
 ?>

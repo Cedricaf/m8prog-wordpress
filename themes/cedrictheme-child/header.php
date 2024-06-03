@@ -7,7 +7,7 @@
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
  * @package WordPress
- * @subpackage Twenty_Twenty_One
+ * @subpackage Twenty_Twenty
  * @since 1.0.0
  */
 
