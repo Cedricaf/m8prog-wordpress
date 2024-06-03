@@ -90,5 +90,25 @@ function add_theme_widgets() {
 }
 
 add_action( 'widgets_init', 'add_theme_widgets' );
+
+function add_style_and_js() {
+    wp_enqueue_script(
+        'm8prog',
+        get_template_directory_uri() . '/dist/js/main.js',
+        array( 'jquery' ),
+        '1.0.0',
+        true
+    );
+
+    wp_enqueue_style(
+        'm8prog_styles',
+        get_template_directory_uri() . '/dist/css/main.min.css',
+        array(),
+        '1.0.0'
+    );
+}
+
+add_action( 'wp_enqueue_scripts', 'add_style_and_js' );
+
 ?>
 
