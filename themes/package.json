@@ -1,6 +1,6 @@
 {
   "private": true,
-  "name": "child theme",
+  "name": "cedrictheme-child",
   "description": "Go to the theme folder and run: npm run build",
   "version": "1.0.0",
   "keywords": [],

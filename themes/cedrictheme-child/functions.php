@@ -11,12 +11,12 @@ function my_child_theme_enqueue_styles() {
 }
 add_action( 'wp_enqueue_scripts', 'my_child_theme_enqueue_styles' );
 
-
+// Change the text domain to match your child theme
 function register_my_menus() {
 	register_nav_menus(
 		[
-			'header' => __( 'Header Menu', 'Text_Domain' ),
-			'other'  => __( 'Other Menu', 'Text_Domain' ),
+			'header' => __( 'Header Menu', 'cedrictheme-child' ),
+			'other'  => __( 'Other Menu', 'cedrictheme-child' ),
 		]
 	);
 }
@@ -47,7 +47,7 @@ add_filter('nav_menu_css_class', 'add_additional_class_on_li', 1, 3);
 /**
  * Function to add extra classes to the menu anchor element
  * @usage:
- * Add 'add_li_class'  => 'nav-item',
+ * Add 'add_a_class'  => 'nav-item',
  * as an extra option to wp_nav_menu()
  *
  * @param $attributes
@@ -55,7 +55,6 @@ add_filter('nav_menu_css_class', 'add_additional_class_on_li', 1, 3);
  * @param $args
  *
  * @return mixed
- * /
  */
 function add_additional_class_on_a($attributes, $item, $args) {
     if ( empty( $attributes['class'] ) ) {
@@ -91,24 +90,23 @@ function add_theme_widgets() {
 
 add_action( 'widgets_init', 'add_theme_widgets' );
 
+// Corrected the use of get_stylesheet_directory_uri() for child theme
 function add_style_and_js() {
-    wp_enqueue_script(
-        'm8prog',
-        get_template_directory_uri() . '/dist/js/main.js',
-        array( 'jquery' ),
-        '1.0.0',
-        true
-    );
+	wp_enqueue_script(
+		'm8prog',
+		get_stylesheet_directory_uri() . '/dist/js/main.js',
+		[ 'jquery' ],
+		'1.0.0',
+		true // Changed to boolean to indicate script should be in the footer
+	);
 
-    wp_enqueue_style(
-        'm8prog_styles',
-        get_template_directory_uri() . '/dist/css/main.min.css',
-        array(),
-        '1.0.0'
-    );
+	wp_enqueue_style(
+		'm8prog_styles',
+		get_stylesheet_directory_uri() . '/dist/css/main.min.css',
+		[],
+		'1.0.0'
+	);
 }
 
 add_action( 'wp_enqueue_scripts', 'add_style_and_js' );
-
-
 
