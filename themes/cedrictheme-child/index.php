@@ -15,6 +15,7 @@ if ( have_posts() ) :
                 <?php the_excerpt(); ?>
                 <?php the_date(); ?>
             </div>
+            
         </main>
         <?php
     endwhile;

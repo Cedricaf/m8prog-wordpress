@@ -110,5 +110,5 @@ function add_style_and_js() {
 
 add_action( 'wp_enqueue_scripts', 'add_style_and_js' );
 
-?>
+
 

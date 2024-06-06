@@ -1,17 +1,10 @@
-.menu {
-    background-color: #333;
-    padding: 10px;
+@import "custom";
+@import "~bootstrap/scss/bootstrap";
+
+h1 {
+  background: $gray-200;
 }
 
-.sidebar {
-    background-color: #f9f9f9;
-    padding: 20px;
+.admin-bar nav.navbar {
+  top: 100;
 }
-
-.footer {
-    background-color: #555;
-    color: #fff;
-    padding: 20px;
-}
-
-
