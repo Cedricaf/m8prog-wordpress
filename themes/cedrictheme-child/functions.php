@@ -1,15 +1,15 @@
 <?php
-function my_child_theme_enqueue_styles() {
-    $parent_style = 'my-parent-theme-style';
+function cedrictheme_child_enqueue_styles() {
+    $parent_style = 'cedrictheme';
 
     wp_enqueue_style( $parent_style, get_template_directory_uri() . '/style.css' );
-    wp_enqueue_style( 'my-child-theme-style',
+    wp_enqueue_style( 'cedrictheme-child',
         get_stylesheet_directory_uri() . '/style.css',
         array( $parent_style ),
         wp_get_theme()->get('Version')
     );
 }
-add_action( 'wp_enqueue_scripts', 'my_child_theme_enqueue_styles' );
+add_action( 'wp_enqueue_scripts', 'cedrictheme_child_enqueue_styles' );
 
 // Change the text domain to match your child theme
 function register_my_menus() {
@@ -108,5 +108,5 @@ function add_style_and_js() {
 	);
 }
 
-add_action( 'wp_enqueue_scripts', 'add_style_and_js' );
+add_action( 'wp_enqueue_script', 'add_style_and_js' );
 
