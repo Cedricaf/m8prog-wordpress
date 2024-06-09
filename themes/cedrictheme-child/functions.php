@@ -112,21 +112,19 @@ add_action( 'wp_enqueue_script', 'add_style_and_js' );
 
 
 
-
-
-
-function register_products_post_type() {
+// Books Custom Post Type
+function register_books_post_type() {
     $labels = [
-        'name'               => __( 'Products', 'cedrictheme-child' ),
-        'singular_name'      => __( 'Product', 'cedrictheme-child' ),
-        'add_new'            => __( 'New Product', 'cedrictheme-child' ),
-        'add_new_item'       => __( 'Add New Product', 'cedrictheme-child' ),
-        'edit_item'          => __( 'Edit Product', 'cedrictheme-child' ),
-        'new_item'           => __( 'New Product', 'cedrictheme-child' ),
-        'view_item'          => __( 'View Product', 'cedrictheme-child' ),
-        'search_items'       => __( 'Search Products', 'cedrictheme-child' ),
-        'not_found'          => __( 'No Products Found', 'cedrictheme-child' ),
-        'not_found_in_trash' => __( 'No Products found in Trash', 'cedrictheme-child' ),
+        'name'               => __( 'Books', 'cedrictheme-child' ),
+        'singular_name'      => __( 'Book', 'cedrictheme-child' ),
+        'add_new'            => __( 'New Book', 'cedrictheme-child' ),
+        'add_new_item'       => __( 'Add New Book', 'cedrictheme-child' ),
+        'edit_item'          => __( 'Edit Book', 'cedrictheme-child' ),
+        'new_item'           => __( 'New Book', 'cedrictheme-child' ),
+        'view_item'          => __( 'View Book', 'cedrictheme-child' ),
+        'search_items'       => __( 'Search Books', 'cedrictheme-child' ),
+        'not_found'          => __( 'No Books Found', 'cedrictheme-child' ),
+        'not_found_in_trash' => __( 'No Books found in Trash', 'cedrictheme-child' ),
     ];
 
     $args = [
@@ -142,26 +140,26 @@ function register_products_post_type() {
             'thumbnail',
             'page-attributes',
         ],
-        'rewrite'      => [ 'slug' => 'products' ],
+        'rewrite'      => [ 'slug' => 'books' ],
         'show_in_rest' => true,
     ];
 
-    register_post_type( 'products', $args );
+    register_post_type( 'books', $args );
 }
 
-// Register Movies Custom Post Type
-function register_devices_post_type() {
+// Movies Custom Post Type
+function register_movies_post_type() {
     $labels = [
-        'name'               => __( 'Device', 'cedrictheme-child' ),
-        'singular_name'      => __( 'Device', 'cedrictheme-child' ),
-        'add_new'            => __( 'New Device', 'cedrictheme-child' ),
-        'add_new_item'       => __( 'Add New Device', 'cedrictheme-child' ),
-        'edit_item'          => __( 'Edit Device', 'cedrictheme-child' ),
-        'new_item'           => __( 'New Device', 'cedrictheme-child' ),
-        'view_item'          => __( 'View Device', 'cedrictheme-child' ),
-        'search_items'       => __( 'Search Devices', 'cedrictheme-child' ),
-        'not_found'          => __( 'No Devices Found', 'cedrictheme-child' ),
-        'not_found_in_trash' => __( 'No Devices found in Trash', 'cedrictheme-child' ),
+        'name'               => __( 'Movies', 'cedrictheme-child' ),
+        'singular_name'      => __( 'Movie', 'cedrictheme-child' ),
+        'add_new'            => __( 'New Movie', 'cedrictheme-child' ),
+        'add_new_item'       => __( 'Add New Movie', 'cedrictheme-child' ),
+        'edit_item'          => __( 'Edit Movie', 'cedrictheme-child' ),
+        'new_item'           => __( 'New Movie', 'cedrictheme-child' ),
+        'view_item'          => __( 'View Movie', 'cedrictheme-child' ),
+        'search_items'       => __( 'Search Movies', 'cedrictheme-child' ),
+        'not_found'          => __( 'No Movies Found', 'cedrictheme-child' ),
+        'not_found_in_trash' => __( 'No Movies found in Trash', 'cedrictheme-child' ),
     ];
 
     $args = [
@@ -177,13 +175,80 @@ function register_devices_post_type() {
             'thumbnail',
             'page-attributes',
         ],
-        'rewrite'      => [ 'slug' => 'devices' ],
+        'rewrite'      => [ 'slug' => 'movies' ],
         'show_in_rest' => true,
     ];
 
-    register_post_type( 'devices', $args );
+    register_post_type( 'movies', $args );
+}
+
+// Labels voor de taxonomie 'Genre'
+$genre_labels = [
+    'name'              => _x( 'Genres', 'taxonomy general name', 'cedrictheme-child' ),
+    'singular_name'     => _x( 'Genre', 'taxonomy singular name', 'cedrictheme-child' ),
+    'search_items'      => __( 'Search Genres', 'cedrictheme-child' ),
+    'all_items'         => __( 'All Genres', 'cedrictheme-child' ),
+    'parent_item'       => __( 'Parent Genre', 'cedrictheme-child' ),
+    'parent_item_colon' => __( 'Parent Genre:', 'cedrictheme-child' ),
+    'edit_item'         => __( 'Edit Genre', 'cedrictheme-child' ),
+    'update_item'       => __( 'Update Genre', 'cedrictheme-child' ),
+    'add_new_item'      => __( 'Add New Genre', 'cedrictheme-child' ),
+    'new_item_name'     => __( 'New Genre Name', 'cedrictheme-child' ),
+    'menu_name'         => __( 'Genres', 'cedrictheme-child' ),
+];
+
+// Labels voor de taxonomie 'Origin'
+$origin_labels = [
+    'name'              => _x( 'Origins', 'taxonomy general name', 'cedrictheme-child' ),
+    'singular_name'     => _x( 'Origin', 'taxonomy singular name', 'cedrictheme-child' ),
+    'search_items'      => __( 'Search Origins', 'cedrictheme-child' ),
+    'all_items'         => __( 'All Origins', 'cedrictheme-child' ),
+    'parent_item'       => __( 'Parent Origin', 'cedrictheme-child' ),
+    'parent_item_colon' => __( 'Parent Origin:', 'cedrictheme-child' ),
+    'edit_item'         => __( 'Edit Origin', 'cedrictheme-child' ),
+    'update_item'       => __( 'Update Origin', 'cedrictheme-child' ),
+    'add_new_item'      => __( 'Add New Origin', 'cedrictheme-child' ),
+    'new_item_name'     => __( 'New Origin Name', 'cedrictheme-child' ),
+    'menu_name'         => __( 'Origins', 'cedrictheme-child' ),
+];
+
+// Argumenten voor de taxonomie 'Genre'
+$genre_args = [
+    'hierarchical'      => true,
+    'labels'            => $genre_labels,
+    'show_ui'           => true,
+    'show_admin_column' => true,
+    'query_var'         => true,
+    'show_in_rest'      => true,
+    'rewrite'           => [ 'slug' => 'genre' ],
+];
+
+// Argumenten voor de taxonomie 'Origin'
+$origin_args = [
+    'hierarchical'      => true,
+    'labels'            => $origin_labels,
+    'show_ui'           => true,
+    'show_admin_column' => true,
+    'query_var'         => true,
+    'show_in_rest'      => true,
+    'rewrite'           => [ 'slug' => 'origin' ],
+];
+
+// Registreren van de taxonomie 'Genre' voor 'Books' en 'Movies'
+function register_genre_taxonomy() {
+    global $genre_args;
+    register_taxonomy( 'genre', [ 'books', 'movies' ], $genre_args );
+}
+
+// Registreren van de taxonomie 'Origin' voor 'Books'
+function register_origin_taxonomy() {
+    global $origin_args;
+    register_taxonomy( 'origin', [ 'books' ], $origin_args );
 }
 
 // Hook into the 'init' action
-add_action( 'init', 'register_products_post_type' );
-add_action( 'init', 'register_devices_post_type' );
+add_action( 'init', 'register_books_post_type' );
+add_action( 'init', 'register_movies_post_type' );
+add_action( 'init', 'register_genre_taxonomy' );
+add_action( 'init', 'register_origin_taxonomy' );
+
