@@ -25,13 +25,9 @@
 
 <body <?php body_class(); ?>>
     <?php wp_body_open(); ?>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg">
         <div class="container">
-            <a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php bloginfo( 'name' ); ?></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+            <a class="navbar-brand" ><?php bloginfo( 'name' ); ?></a>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <?php
                 wp_nav_menu(
@@ -48,10 +44,6 @@
                     ]
                 );
                 ?>
-                <form class="d-flex" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit">Search</button>
-                </form>
             </div>
         </div>
     </nav>

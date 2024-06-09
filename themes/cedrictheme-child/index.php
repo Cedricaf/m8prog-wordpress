@@ -14,7 +14,7 @@ if ( have_posts() ) :
             <div class="col-lg-8 px-0">
                 <?php the_excerpt(); ?>
                 <?php the_date(); ?>
-                <?php get_header_image();?>
+                
             </div>
             
         </main>

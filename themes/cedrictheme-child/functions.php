@@ -110,3 +110,80 @@ function add_style_and_js() {
 
 add_action( 'wp_enqueue_script', 'add_style_and_js' );
 
+
+
+
+
+
+function register_products_post_type() {
+    $labels = [
+        'name'               => __( 'Products', 'cedrictheme-child' ),
+        'singular_name'      => __( 'Product', 'cedrictheme-child' ),
+        'add_new'            => __( 'New Product', 'cedrictheme-child' ),
+        'add_new_item'       => __( 'Add New Product', 'cedrictheme-child' ),
+        'edit_item'          => __( 'Edit Product', 'cedrictheme-child' ),
+        'new_item'           => __( 'New Product', 'cedrictheme-child' ),
+        'view_item'          => __( 'View Product', 'cedrictheme-child' ),
+        'search_items'       => __( 'Search Products', 'cedrictheme-child' ),
+        'not_found'          => __( 'No Products Found', 'cedrictheme-child' ),
+        'not_found_in_trash' => __( 'No Products found in Trash', 'cedrictheme-child' ),
+    ];
+
+    $args = [
+        'labels'       => $labels,
+        'has_archive'  => true,
+        'public'       => true,
+        'hierarchical' => false,
+        'supports'     => [
+            'title',
+            'editor',
+            'excerpt',
+            'custom-fields',
+            'thumbnail',
+            'page-attributes',
+        ],
+        'rewrite'      => [ 'slug' => 'products' ],
+        'show_in_rest' => true,
+    ];
+
+    register_post_type( 'products', $args );
+}
+
+// Register Movies Custom Post Type
+function register_devices_post_type() {
+    $labels = [
+        'name'               => __( 'Device', 'cedrictheme-child' ),
+        'singular_name'      => __( 'Device', 'cedrictheme-child' ),
+        'add_new'            => __( 'New Device', 'cedrictheme-child' ),
+        'add_new_item'       => __( 'Add New Device', 'cedrictheme-child' ),
+        'edit_item'          => __( 'Edit Device', 'cedrictheme-child' ),
+        'new_item'           => __( 'New Device', 'cedrictheme-child' ),
+        'view_item'          => __( 'View Device', 'cedrictheme-child' ),
+        'search_items'       => __( 'Search Devices', 'cedrictheme-child' ),
+        'not_found'          => __( 'No Devices Found', 'cedrictheme-child' ),
+        'not_found_in_trash' => __( 'No Devices found in Trash', 'cedrictheme-child' ),
+    ];
+
+    $args = [
+        'labels'       => $labels,
+        'has_archive'  => true,
+        'public'       => true,
+        'hierarchical' => false,
+        'supports'     => [
+            'title',
+            'editor',
+            'excerpt',
+            'custom-fields',
+            'thumbnail',
+            'page-attributes',
+        ],
+        'rewrite'      => [ 'slug' => 'devices' ],
+        'show_in_rest' => true,
+    ];
+
+    register_post_type( 'devices', $args );
+}
+
+// Hook into the 'init' action
+add_action( 'init', 'register_products_post_type' );
+add_action( 'init', 'register_devices_post_type' );

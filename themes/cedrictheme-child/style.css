@@ -17,3 +17,25 @@ body {
 .wp-block-group{
     background: lightgray;
 }
+
+.navbar{
+    background: #323232;
+    color: #fff;
+}
+
+.navbar-brand{
+    color: #fff;
+}
+
+.navlink{
+    color: #fff;
+}
+
+.collapse{
+    color: white;
+}
+
+
+.mt-5{
+    color: #fff;
+}
