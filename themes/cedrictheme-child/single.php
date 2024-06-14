@@ -8,10 +8,7 @@
         <?php the_excerpt(); ?>
         <?php the_date(); ?>
         <?php the_author_meta('description'); ?>
-    </div>
-</main>
-
-<?php 
+        <?php 
 the_post_navigation(
     [
         'next_text' => __( 'Next post', 'cedrictheme-child' ),
@@ -19,5 +16,9 @@ the_post_navigation(
     ] 
 );
 ?>
+    </div>
+</main>
+
+
 
 <?php get_footer(); ?>

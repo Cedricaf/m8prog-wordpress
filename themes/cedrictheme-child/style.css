@@ -1,4 +1,5 @@
 /*
+
  Theme Name:   Cedric theme child
  Description:  A custom child theme for My Parent Theme
  Author:       Cedric Kiraly
@@ -8,6 +9,7 @@
  License:      GNU General Public License v2 or later
  License URI:  http://www.gnu.org/licenses/gpl-2.0.html
  Text Domain:  cedrictheme-child
+
 */
 
 body {
@@ -19,7 +21,7 @@ body {
 }
 
 .navbar{
-    background: #323232;
+    background: hsl(0, 5%, 25%);
     color: #fff;
 }
 
@@ -27,7 +29,15 @@ body {
     color: #fff;
 }
 
-.navlink{
+.navbar-brand:hover{
+    color: #fff;
+}
+
+.nav-link{
+    color: #fff;
+}
+
+.nav-link:hover{
     color: #fff;
 }
 
@@ -37,5 +47,9 @@ body {
 
 
 .mt-5{
+    color: #fff;
+}
+
+.menu-item{
     color: #fff;
 }

@@ -1,4 +1,5 @@
 <?php
+
 function cedrictheme_child_enqueue_styles() {
     $parent_style = 'cedrictheme';
 
@@ -86,6 +87,30 @@ function add_theme_widgets() {
             'after_title'   => '</h3>',
         ] 
     );
+    register_sidebar( 
+        [
+            'name'          => __( 'forms', 'cedrictheme-child' ),
+            'id'            => 'forms',
+            'description'   => __( 'A widget area located in the footer.', 'cedrictheme-child' ),
+            'before_widget' => '<div id="%1$s" class="widget-container %2$s">',
+            'after_widget'  => '</div>',
+            'before_title'  => '<h3 class="widget-title">',
+            'after_title'   => '</h3>',
+        ] 
+    );
+
+    register_sidebar( 
+        [
+            'name'          => __( 'another widget', 'cedrictheme-child' ),
+            'id'            => 'another widget',
+            'description'   => __( 'A widget area located in the footer.', 'cedrictheme-child' ),
+            'before_widget' => '<div id="%1$s" class="widget-container %2$s">',
+            'after_widget'  => '</div>',
+            'before_title'  => '<h3 class="widget-title">',
+            'after_title'   => '</h3>',
+        ] 
+    );
+
 }
 
 add_action( 'widgets_init', 'add_theme_widgets' );

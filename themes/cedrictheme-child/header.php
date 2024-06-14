@@ -17,6 +17,7 @@
 <head>
     <meta charset="<?php bloginfo( 'charset' ); ?>" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <title><?php bloginfo('name'); ?></title>
@@ -25,9 +26,9 @@
 
 <body <?php body_class(); ?>>
     <?php wp_body_open(); ?>
-    <nav class="navbar navbar-expand-lg">
+    <nav class="navbar navbar-expand-lg custom-navbar">
         <div class="container">
-            <a class="navbar-brand" ><?php bloginfo( 'name' ); ?></a>
+            <a class="navbar-brand" href=""><?php bloginfo( 'name' ); ?></a>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <?php
                 wp_nav_menu(
@@ -49,5 +50,4 @@
     </nav>
 
 
-<?php
 
