@@ -91,7 +91,7 @@ function add_theme_widgets() {
         [
             'name'          => __( 'forms', 'cedrictheme-child' ),
             'id'            => 'forms',
-            'description'   => __( 'A widget area located in the footer.', 'cedrictheme-child' ),
+            'description'   => __( 'forms located somewhere.', 'cedrictheme-child' ),
             'before_widget' => '<div id="%1$s" class="widget-container %2$s">',
             'after_widget'  => '</div>',
             'before_title'  => '<h3 class="widget-title">',

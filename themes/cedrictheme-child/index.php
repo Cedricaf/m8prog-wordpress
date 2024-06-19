@@ -10,16 +10,12 @@ if ( have_posts() ) :
         the_post();
         ?>
         <main class="container my-5">
+            <?php the_excerpt(); ?>
             <div class="col-lg-8 px-0">
-                <?php the_excerpt(); ?>
-                <?php the_date(); ?>
                 
+                <?php the_date(); ?>
+                <?php dynamic_sidebar( 'forms' ); ?>
             </div>
-            <section class="web-content">
-                <div class="block">
-                    
-                </div>
-            </section>
             
         </main>
         <?php

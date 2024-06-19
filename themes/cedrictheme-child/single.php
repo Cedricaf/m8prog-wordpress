@@ -7,7 +7,8 @@
     <div class="col-lg-8 px-0">
         <?php the_excerpt(); ?>
         <?php the_date(); ?>
-        <?php the_author_meta('description'); ?>
+        <img src="<?php echo get_template_directory_uri(); ?>/src/img/LV_Energy_black (1).webp">
+        <?php dynamic_sidebar( 'forms' ); ?>
         <?php 
 the_post_navigation(
     [
