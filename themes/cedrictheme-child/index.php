@@ -10,9 +10,9 @@ if ( have_posts() ) :
         the_post();
         ?>
         <main class="container my-5">
-            <?php the_excerpt(); ?>
+            
             <div class="col-lg-8 px-0">
-                
+                <?php the_excerpt(); ?>
                 <?php the_date(); ?>
                 <?php dynamic_sidebar( 'forms' ); ?>
             </div>
@@ -28,7 +28,6 @@ endif;
 ?>
 
 <?php get_footer(); ?>
-
 
 
 

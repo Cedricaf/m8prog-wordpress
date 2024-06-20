@@ -14,123 +14,123 @@
 
 
 * {
-    padding: 0;
-    margin: 0;
-  }
-  
+  padding: 0;
+  margin: 0;
+}
+
 
 body {
-    background-color:rgb(252, 252, 252);
+  background-color:rgb(252, 252, 252);
 }
 
 nav {
-    display: flex; /* 1 */
-    justify-content: space-between; /* 2 */
-    padding: 1rem 2rem; /* 3 */
-    background: #F1F1F1; /* 4 */
-  }
+  display: flex; /* 1 */
+  justify-content: space-between; /* 2 */
+  padding: 1rem 2rem; /* 3 */
+  background: #F1F1F1; /* 4 */
+}
+
+nav ul {
+  display: flex; /* 5 */
+  list-style: none; /* 6 */
+}
+
+nav li {
+  padding-left: 1rem; /* 7! */
+}
+
+nav a {
+  text-decoration: none;
+  color: #0d47a1
+}
+
+
+.brand{
+  font-weight: bold;
+}
+
+.items{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.item{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: black;
   
-  nav ul {
-    display: flex; /* 5 */
-    list-style: none; /* 6 */
-  }
+}
+
+a{
+  color: #fff;
+}
+
+main{
+  display: flex;
+  height: 38rem;
+  width: auto;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
   
-  nav li {
-    padding-left: 1rem; /* 7! */
-  }
-
-  nav a {
-    text-decoration: none;
-    color: #0d47a1
-  }
+}
 
 
-  .brand{
-    font-weight: bold;
-  }
+.container {
+  max-width: 1140px; /* Adjust max-width for your content */
+  margin: 0 auto; /* Center the container horizontally */
+  padding: 0 1rem; /* Add some padding for visual balance */
+}
 
-  .items{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5rem;
-  }
 
-  .item{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: black;
-    
-  }
-  
-  a{
-    color: #fff;
-  }
 
-  main{
-    display: flex;
-    height: 30rem;
-    width: auto;
+/* Adjust font sizes and colors as needed */
+.content-area h2, .content-area h3, .content-area h4 {
+  font-size: 1.8rem; /* Adjust heading sizes */
+  margin-bottom: 1rem; /* Add some space after headings */
+}
+
+.content-area p {
+  font-size: 1rem; /* Adjust paragraph font size */
+  line-height: 1.5; /* Adjust line height for readability */
+}
+
+/* Add styles for specific elements like the_excerpt, the_date, etc. */
+.the-excerpt {
+  /* Customize styles for the excerpt */
+}
+
+.the-date {
+  /* Customize styles for the date */
+}
+
+
+
+
+@media only screen and (max-width: 600px) {
+  nav {
     flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    
   }
-  
-
-  .container {
-    max-width: 1140px; /* Adjust max-width for your content */
-    margin: 0 auto; /* Center the container horizontally */
-    padding: 0 1rem; /* Add some padding for visual balance */
+  nav ul {
+    flex-direction: column;
+    padding-top: 0.5rem;
   }
-
-  
-  
-  /* Adjust font sizes and colors as needed */
-  .content-area h2, .content-area h3, .content-area h4 {
-    font-size: 1.8rem; /* Adjust heading sizes */
-    margin-bottom: 1rem; /* Add some space after headings */
+  nav li {
+    padding: 0.5rem 0;
   }
-  
-  .content-area p {
-    font-size: 1rem; /* Adjust paragraph font size */
-    line-height: 1.5; /* Adjust line height for readability */
-  }
-  
-  /* Add styles for specific elements like the_excerpt, the_date, etc. */
-  .the-excerpt {
-    /* Customize styles for the excerpt */
-  }
-  
-  .the-date {
-    /* Customize styles for the date */
-  }
-  
+} 
 
 
 
-  @media only screen and (max-width: 600px) {
-    nav {
-      flex-direction: column;
-    }
-    nav ul {
-      flex-direction: column;
-      padding-top: 0.5rem;
-    }
-    nav li {
-      padding: 0.5rem 0;
-    }
-  } 
-  
-  
-  
 .col-lg-8 px-0{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .menu-hoofdmenu{
-    background: green;
-  }
+  background: green;
+}
