@@ -18,7 +18,6 @@
   margin: 0;
 }
 
-
 body {
   background-color:rgb(252, 252, 252);
 }
@@ -27,7 +26,7 @@ nav {
   display: flex; /* 1 */
   justify-content: space-between; /* 2 */
   padding: 1rem 2rem; /* 3 */
-  background: #F1F1F1; /* 4 */
+  background: #f1f1f19f; /* 4 */
 }
 
 nav ul {
